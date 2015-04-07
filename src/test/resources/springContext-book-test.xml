@@ -8,12 +8,9 @@
     <!--<elasticsearch:node-client id="client" local="true"/>-->
 
     <elasticsearch:transport-client id="client" cluster-name="elasticsearch" cluster-nodes="127.0.0.1:9300"/>
-
     <bean name="elasticsearchTemplate" class="org.springframework.data.elasticsearch.core.ElasticsearchTemplate">
         <constructor-arg name="client" ref="client"/>
     </bean>
-
-
     <elasticsearch:repositories base-package="org.springframework.data.elasticsearch.repositories.book" />
 
 
